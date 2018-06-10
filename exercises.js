@@ -62,7 +62,13 @@ var arrayLength = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var countAll;
+var countAll = function(arr){
+  function getSum(total, num){
+    return total + num;
+  }
+  var result = arr.reduce(getSum);
+  return result;
+}
 
 /* #countStrings
  *
@@ -388,7 +394,7 @@ module.exports = {
   sumArrays: sumArrays, 
   stringCount: stringCount,
   arrayLength: arrayLength,
-  countAll: null,
+  countAll: countAll,
   countStrings: null,
   countAllStrings: null,
   convertToArray: null,
