@@ -179,7 +179,13 @@ var createZeroFilledArray = function(num){
  * @param {Array}
  * @return {Array}
  */
-var poppedArray;
+
+
+var poppedArray = function(arr){
+  var myArray = arr;
+  var popped = arr.pop();
+  return myArray;
+}
 
 /* #splitString
  *
@@ -457,7 +463,7 @@ module.exports = {
   convertToArray: convertToArray,
   objectSize: objectSize,
   createZeroFilledArray: createZeroFilledArray,
-  poppedArray: null,
+  poppedArray: poppedArray,
   splitString: null,
   lengthOfLast: null,
   sumBelowTen: null,
