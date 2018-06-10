@@ -274,14 +274,13 @@ var multiplyAll = function(arr){
  * @return {Number}
  */
 var sumAllPositive = function(arr){
-
   var sum = null;
-  for (i=0; i<arr.length; i++){
-    if (arr[i] >= 0){
-      sum = arr[i] + sum;
+    for (i=0; i<arr.length; i++){
+      if (arr[i] >= 0){
+        sum = arr[i] + sum;
+      }
     }
-  }
-  return sum;
+    return sum;
 }
 
 /* #stringCountBelowThree
@@ -291,7 +290,15 @@ var sumAllPositive = function(arr){
  * @param {Array}
  * @return {Number}
  */
-var stringCountBelowThree;
+var stringCountBelowThree = function(arr){
+  for (i=0; i < arr.length; i++){
+    if (arr[i].length >= 3){
+      var myArray = arr;
+      var popOff = arr.pop(arr[i])
+      return myArray.length;
+    }
+  }
+}
 
 /* #countObjects
  *
@@ -513,7 +520,7 @@ module.exports = {
   moreThanTenLetters: moreThanTenLetters,
   multiplyAll: multiplyAll,
   sumAllPositive: sumAllPositive,
-  stringCountBelowThree: null,
+  stringCountBelowThree: stringCountBelowThree,
   countObjects: null,
   getObjectKeys: null,
   getObjectValues: null,
