@@ -1,3 +1,6 @@
+var test = "hello world";
+console.log(test);
+
 /* #doubleArray
  *
  * Takes in an array of numbers and returns an array with each element doubled
@@ -5,7 +8,8 @@
  * @param {Array} // [1,2,3]
  * @return {Array} // [2,4,6]
  */
-var doubleArray = function(arr) {
+
+ var doubleArray = function(arr) {
   var result = [];
   for (var i = 0; i < arr.length; i++) {
     result.push(arr[i] * 2) 
@@ -19,9 +23,13 @@ var doubleArray = function(arr) {
  *
  * @param {Array}
  * @param {Array}
- * @return {Bool}
+ * @return {Number}
  */
-var sumArrays;
+// var sumArrays = function(arr, arr2){
+//   var result = arr + arr2;
+//   return result;
+// }
+// console.log(arr);
 
 /* #stringCount
  *
@@ -30,7 +38,9 @@ var sumArrays;
  * @param {String}
  * @return {Number}
  */
-var stringCount;
+var stringCount = function(str){
+  return str.length;
+}
 
 /* #arrayLength
  *
@@ -39,7 +49,9 @@ var stringCount;
  * @param {Array}
  * @return {Number}
  */
-var arrayLength;
+var arrayLength = function(arr){
+  return arr.length;
+}
 
 /* #countAll
  *
@@ -370,10 +382,10 @@ var tupleConvertToObject;
 
 
 module.exports = {
-  doubleArray: null,
+  doubleArray: doubleArray,
   sumArrays: null, 
-  stringCount: null,
-  arrayLength: null,
+  stringCount: stringCount,
+  arrayLength: arrayLength,
   countAll: null,
   countStrings: null,
   countAllStrings: null,
