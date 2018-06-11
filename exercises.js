@@ -438,7 +438,21 @@ var getKeys = function(obj){
  * @param {Object}
  * @return {Array}
  */
-var objectToArray;
+var objectToArray = function(obj){
+  myArray = [];
+  var keyPair = Object.keys(obj);
+  var valuePair = Object.values(obj);
+  for (i=0; i<keyPair.length; i++){
+    for (j=0; j<valuePair.length; j++){
+      var newTup1 = [keyPair[0], valuePair[0]];
+      var newTup2 = [keyPair[1], valuePair[1]];
+    }
+  }
+  myArray.push(newTup1);
+  myArray.push(newTup2);
+  return myArray;
+}
+
 
 /* #arrayToObject
  *
@@ -448,7 +462,15 @@ var objectToArray;
  * @param {Array}
  * @return {Object}
  */
-var arrayToObject;
+var arrayToObject = function (arr){
+  console.log(arr);
+  var newObj = {};
+  for (i=0; i<arr.length; i++){
+    newObj[arr[i]] = false;
+  }
+  console.log(newObj);
+  return newObj;
+}
 
 /* #arraysToObject
  *
@@ -569,8 +591,8 @@ module.exports = {
   strToKeys: strToKeys,
   getValues: getValues,
   getKeys: getKeys,
-  objectToArray: null,
-  arrayToObject: null,
+  objectToArray: objectToArray,
+  arrayToObject: arrayToObject,
   arraysToObject: null,
   objectsToTuples: null,
   mapArrayValues: null,
